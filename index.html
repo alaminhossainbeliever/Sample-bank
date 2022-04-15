@@ -14,9 +14,9 @@
         <div class="submit-area">
             <h4>Login</h4>
             <br>
-            <input type="email" name="" placeholder="Email" class="form-control" id="">
+            <input type="email" name="" placeholder="Email" class="form-control" id="email">
             <br>
-            <input type="password" name="" placeholder="Password" class="form-control" id="">
+            <input  type="password" name="" placeholder="Password" class="form-control" id="pass">
             <br>
             <button id="login" class="btn btn-success">Enter</button>
         </div>
@@ -64,11 +64,21 @@
     <script>
         //login button event handler
         const loginbtn=document.getElementById("login");
+       
         loginbtn.addEventListener("click",function(){
-            const loginarea = document.getElementById("login-area");
+             const password=document.getElementById("pass").value;
+        const word="alamin";
+        const email=document.getElementById("email").value;
+        const mail="alaminhossain3701@gmail.com"
+            if (password== word&&email==mail) {
+                 const loginarea = document.getElementById("login-area");
             loginarea.style.display= "none";
             const transectionArea = document.getElementById("transection-area");
             transectionArea.style.display="block";
+            }
+           else{
+               console.log("enter correct password and email");
+           }
         })
         // deposit button event handler
         const depoBtn = document.getElementById("addDeposit");
